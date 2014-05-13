@@ -1,1 +1,22 @@
-Hello World
+---
+layout: default
+description: homepage
+---
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>PCSX-Reloaded is a PlayStation Emulator based on PCSX-df 1.9, with support for Windows, GNU/Linux and Mac OS X as well as many bugfixes and improvements.</p>
+    <p><a class="btn btn-primary btn-lg" role="button" href="http://pcsxr.codeplex.com/">Learn more/Download &raquo;</a></p>
+  </div>
+</div>
+
+
+<div id="posts">
+  <h1>Latest articles</h1>
+  <ul>
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> - <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
